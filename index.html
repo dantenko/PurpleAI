@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PurpleAI – Kreatywna AI dla marek</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -43,23 +44,23 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
       padding: 20px;
     }
-    .cta {
+    .cta, .newsletter, .contact, .socials, .about {
       text-align: center;
       margin-top: 40px;
     }
-    .cta input[type="email"] {
+    input[type="email"], input[type="text"], textarea {
       padding: 12px;
       width: 250px;
       border-radius: 8px;
       border: 1px solid #ccc;
+      margin: 5px;
     }
-    .cta button {
+    button {
       background-color: #6a0dad;
       color: white;
       border: none;
       padding: 12px 24px;
       border-radius: 8px;
-      margin-left: 10px;
       cursor: pointer;
     }
     footer {
@@ -68,14 +69,30 @@
       background: #eee;
       font-size: 0.9em;
     }
+    img.logo {
+      max-width: 200px;
+      margin: 20px auto;
+      display: block;
+    }
+    .socials a {
+      margin: 0 10px;
+      color: #6a0dad;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
   <header>
+    <img src="logo.png" alt="PurpleAI logo" class="logo">
     <h1>PurpleAI</h1>
     <p class="lead">Twój kreatywny współpracownik oparty na AI. Twórz estetykę marki, pisz treści i planuj kampanie w jednym narzędziu.</p>
   </header>
   
+  <section class="about">
+    <h2>O projekcie</h2>
+    <p>PurpleAI to startup rozwijający narzędzie AI dla freelancerów, małych firm i marek osobistych. Łączymy design, copywriting i planowanie kampanii w jednym miejscu.</p>
+  </section>
+
   <section>
     <h2>Co potrafi PurpleAI?</h2>
     <div class="features">
@@ -96,13 +113,31 @@
         <p>Planowanie kampanii i harmonogram publikacji w Notion lub PDF.</p>
       </div>
     </div>
-    <div class="cta">
-      <h2>Zapisz się do testów PurpleAI</h2>
-      <p>Dołącz do listy oczekujących i jako pierwszy przetestuj nasze narzędzie!</p>
-      <form>
-        <input type="email" placeholder="Twój e-mail" required>
+
+    <div class="newsletter">
+      <h2>Zapisz się do newslettera</h2>
+      <form action="https://tally.so/r/yourformid" method="POST">
+        <input type="email" name="email" placeholder="Twój e-mail" required>
         <button type="submit">Zapisz się</button>
       </form>
+    </div>
+
+    <div class="contact">
+      <h2>Kontakt</h2>
+      <form>
+        <input type="text" name="name" placeholder="Imię" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <textarea name="message" placeholder="Wiadomość" rows="4" required></textarea>
+        <br>
+        <button type="submit">Wyślij</button>
+      </form>
+    </div>
+
+    <div class="socials">
+      <h2>Znajdziesz nas tutaj</h2>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Discord</a>
     </div>
   </section>
 
